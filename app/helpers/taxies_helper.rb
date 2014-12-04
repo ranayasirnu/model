@@ -1,0 +1,2 @@
+module TaxiesHelper
+end
