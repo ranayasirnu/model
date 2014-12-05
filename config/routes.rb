@@ -34,7 +34,8 @@ Rails.application.routes.draw do
   get 'beauties/get_beauties'
   get 'taxies/get_taxies'
   get 'restaurants/get_restaurants'
-  get 'shoppings/get_shoppings' 
+  get 'shoppings/get_shoppings'
+  post 'users/fb_login'
    
    
   # Example resource route with more complex sub-resources:
