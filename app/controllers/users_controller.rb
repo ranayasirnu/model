@@ -4,9 +4,7 @@ class UsersController < ApplicationController
   
   def fb_login
     
-    puts "=============: #{params[:user][:user_id].inspect}"
-    
-    @user = User.find_for_facebook_mobile_oauth(params[:user])
+    @user = User.find_for_facebook_mobile_oauth(params)
     respond_to do |format|
       if @user.present? and @user.id
         format.json { render :json => {:success => true, :user => @user } }

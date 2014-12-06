@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
          
          
   def self.find_for_facebook_mobile_oauth(user_json)
+    puts "==========dddddd====: #{user_json['user_id']}"
+    puts "==========dddddd====: #{user_json['location']}"
+    puts "==========dddddd====: #{user_json['status']}"
     
     user = User.where(:user_id => user_json['user_id']).first
     if user.present?
@@ -21,7 +24,6 @@ class User < ActiveRecord::Base
                         user_id:user_json['user_id']
                       )
     end
-    puts "---------------: #{user.inspect}"
     user
   end
   
